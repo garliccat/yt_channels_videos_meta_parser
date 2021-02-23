@@ -27,13 +27,13 @@ for channel in f:
     channel_title = links[0].text.split('\n')[0]
     for link in links[1: -1]:
         if len(link.text.split('\n')) == 3:
-            print(f'Канал: {channel_title}')
+            print(f'Channel: {channel_title}')
             video_name = link.text.split('\n')[0]
-            print(f'Название видео: {video_name}')
+            print(f'Video name: {video_name}')
             views = link.text.split('\n')[1]
-            print(f'Просмотры: {views}')
+            print(f'Views: {views}')
             age = link.text.split('\n')[2]
-            print(f'Возраст: {age}')
+            print(f'Video age: {age}')
             print('-' * 20)
             
             dump_dict['channel'].append(channel_title)
